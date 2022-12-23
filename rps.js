@@ -6,15 +6,26 @@ function randomNumber(min, max) {
     } 
 
 // Declare a function that assigns a number to each element "Rock", "Paper" and "Scissor"
-function getComputerChoice(Rock, Paper, Scissor) {
+function getComputerChoice(Rock, Paper, Scissors) {
     if (randomNumber() === 1) {
         return('Rock');
     } else if (randomNumber() === 2) {
         return('Paper');
     } else {
-        return('Scissor');
+        return('Scissors');
     }
 }
+
+// Write a function that plays a single round of Rock paper Scissors
+// When the computer plays first
+// Then a pop up appears and asks the playerSelection to play
+// The player can use any case variation (case insensitive) 
+// After the computer and the playerSelection played
+// There's an alert that indicate the winner  with a text
+// Each combination has its dedicated alert ()
+// Paper beats Rock
+// Rock beats Scissors
+// Scissors beat
 
 
 
