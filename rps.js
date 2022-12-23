@@ -11,11 +11,25 @@
 // Otherwise print 'Scissor'
 
 // The computer choose a random number between 1, 2 and 3 (OK)
-function getComputerChoice(min, max) {
+function randomNumber(min, max) {
     min = Math.ceil(1);
     max = Math.floor(3);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+
     } 
+// Declare a function to assign a number to each element
+function getComputerChoice(Rock, Paper, Scissor) {
+    if (randomNumber() === 1) {
+        return('Rock');
+    } else if (randomNumber() === 2) {
+        return('Paper');
+    } else {
+        return('Scissor');
+    }
+}
+   
+
+
 
 
 // Print the variable associated with that number
