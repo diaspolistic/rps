@@ -20,8 +20,8 @@
 
 // Write a function that plays a single round of Rock paper Scissors
 function rpsGame(computerSelection, playerSelection) {
-    // The user plays the first round
-    playerSelection = prompt('It\'s your turn. Type either rock, paper or scissor');
+    The user plays the first round
+    playerSelection = prompt('It\'s your turn. Type either rock, paper or scissors');
     if (playerSelection === 'rock') {
         return(playerSelection);
 
@@ -32,14 +32,10 @@ function rpsGame(computerSelection, playerSelection) {
         return(playerSelection);
 
     else { 
-        prompt('You can only type either rock, paper or scissor. Try again');
+        prompt('You can only type either rock, paper or scissors. Try again');
     }
     
-    
-    }
-        
-
-
+    computerSelection = confirm('It\'s the computer turn');
     {
         // computerSelection = prompt('It\'s the computer turn')
     function getComputerChoice(Rock, Paper, Scissors) {
@@ -59,6 +55,7 @@ function rpsGame(computerSelection, playerSelection) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
             } 
     
+}
 }
 // Then a pop up appears and asks the playerSelection to play
 // The player can use any case variation (case insensitive) 
