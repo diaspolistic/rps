@@ -23,14 +23,14 @@ function rpsGame(computerSelection, playerSelection) {
     // // The user plays the first round
     playerSelection = prompt('It\'s your turn. Type either rock, paper or scissors');
 
-    if (playerSelection === 'rock') {
-        alert('You\'ve played' + ' ' + playerSelection);
+    if (playerSelection.toLowerCase() === 'rock') {
+        alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
 
-    } else if (playerSelection === 'paper') {
-        alert('You\'ve played' + ' ' + playerSelection);
+    } else if (playerSelection.toLowerCase() === 'paper') {
+        alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
 
-    } else if (playerSelection === 'scissors') {
-        alert('You\'ve played' + ' ' + playerSelection);
+    } else if (playerSelection.toLowerCase() === 'scissors') {
+        alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
 
     } 
     else { 
@@ -68,6 +68,7 @@ function rpsGame(computerSelection, playerSelection) {
 // Paper beats Rock
 // Rock beats Scissors
 // Scissors beat Paper
+// It's a tie
 
 
 
