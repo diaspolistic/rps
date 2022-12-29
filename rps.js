@@ -34,6 +34,7 @@ function randomNumber(min, max) {
     getComputerChoice();
     function getComputerChoice() {
         // Declare a function that assigns a number to each element "Rock", "Paper" and "Scissor"
+        // Assign a value (Rock, Paper or Scissors) to computerSelection parameter according to the randomNumber
         
         if (randomNumber() === 1) {
             computerSelection = Rock;
