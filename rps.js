@@ -32,10 +32,8 @@ function rpsGame(computerSelection, playerSelection) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
             } 
         
-            console.log(randomNumber());
-        // Declare a function that assigns a number to each element "Rock", "Paper" and "Scissor"
-        // Assign a value (Rock, Paper or Scissors) to computerSelection parameter according to the randomNumber
-        
+
+    // Assign a value (Rock, Paper or Scissors) to computerSelection parameter according to the randomNumber    
         if (randomNumber() === 1) {
             computerSelection = Rock;
             alert('The computer played' + ' ' + Rock);
