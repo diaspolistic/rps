@@ -22,17 +22,17 @@ function rpsGame(computerSelection, playerSelection) {
         prompt('You can only type either rock, paper or scissors. Try again');
     }
    
-// Declare a function that let the computer choose a random number between 1, 2 and 3 (OK)
-function randomNumber(min, max) {
-    min = Math.ceil(1);
-    max = Math.floor(3);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-    } 
-
-    console.log(randomNumber());
 
     getComputerChoice();
+    // Declare a function that let the computer choose a random number between 1, 2 and 3 (OK)
     function getComputerChoice() {
+        function randomNumber(min, max) {
+            min = Math.ceil(1);
+            max = Math.floor(3);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+            } 
+        
+            console.log(randomNumber());
         // Declare a function that assigns a number to each element "Rock", "Paper" and "Scissor"
         // Assign a value (Rock, Paper or Scissors) to computerSelection parameter according to the randomNumber
         
@@ -49,6 +49,7 @@ function randomNumber(min, max) {
     }
 
 // Compare the computerChoice and the playerSelection and alert the winner/looser 
+    result();
     function result() {
         if (computerSelection === Rock && playerSelection === Paper) {
             alert('You win ! Paper beats Rock ');
@@ -66,7 +67,6 @@ function randomNumber(min, max) {
             alert('It\'s a tie. Next round');
         } 
     }
-    alert(result())
 
 }
 
