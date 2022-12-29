@@ -1,28 +1,9 @@
-// // Declare a function that let the computer choose a random number between 1, 2 and 3 (OK)
-
-
-// // Declare a function that assigns a number to each element "Rock", "Paper" and "Scissor"
-// function getComputerChoice(Rock, Paper, Scissors) {
-//     function randomNumber(min, max) {
-//         min = Math.ceil(1);
-//         max = Math.floor(3);
-//         return Math.floor(Math.random() * (max - min + 1)) + min;
-//         } 
-
-//     if (randomNumber() === 1) {
-//         return('Rock');
-//     } else if (randomNumber() === 2) {
-//         return('Paper');
-//     } else {
-//         return('Scissors');
-//     }
-// }
-
-// Write a function that plays a single round of Rock paper Scissors
+// Declare a variable for each choice 
 let Rock = 'rock';
 let Paper = 'paper';
 let Scissors = 'scissors';
 
+// Write a function that plays a single round of Rock paper Scissors
 function rpsGame(computerSelection, playerSelection) {
     // // The user plays the first round
     playerSelection = prompt('It\'s your turn. Type either rock, paper or scissors');
@@ -40,8 +21,6 @@ function rpsGame(computerSelection, playerSelection) {
     else { 
         prompt('You can only type either rock, paper or scissors. Try again');
     }
-// When the user input is returned, a pop up appears saying that it is the computer turn 
-// computerSelection = getComputerChoice();
    
 // Declare a function that let the computer choose a random number between 1, 2 and 3 (OK)
 function randomNumber(min, max) {
@@ -66,22 +45,9 @@ function randomNumber(min, max) {
             computerSelection = Scissors;
             alert('The computer played' + ' ' + Scissors);
         }
-    
     }
 
-    // if (randomNumber === 1) {
-    //     computerSelection = Rock;
-    // } else if (randomNumber = 2) {
-    //     computerSelection = Paper;
-    // } else if (randomNumber = 3) {
-    //     computerSelection = Scissors;
-    // }
-// Write a conditional that assign the computerSelection Rock, paper and scissors to to a number
-
-    
-
-// 1. Verify what was the input of the user and of the computer
-// 2. Compare the two results
+// Compare the computerChoice and the playerSelection and alert the winner/looser 
     function result() {
         if (computerSelection === Rock && playerSelection === Paper) {
             alert('You win ! Paper beats Rock ');
@@ -100,25 +66,8 @@ function randomNumber(min, max) {
         } 
     }
     alert(result())
-// 3. If the combination match something alert a specific message
-
-//     let result = rpsResult();
-// // When the result is 'rock' with 'scissors', alert 'rock beats scissors'
-//     function rpsResult() {
-      
-//     } 
 
 }
-
-// Then a pop up appears and asks the playerSelection to play
-// The player can use any case variation (case insensitive) 
-// After the computer and the playerSelection played
-// There's an alert that indicate the winner  with a text
-// Each combination has its dedicated alert ()
-// Paper beats Rock
-// Rock beats Scissors
-// Scissors beat Paper
-// It's a tie
 
 
 
