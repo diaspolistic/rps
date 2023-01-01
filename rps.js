@@ -2,8 +2,6 @@
 let Rock = 'rock';
 let Paper = 'paper';
 let Scissors = 'scissors';
-let oneRound = playRound();
-
 
 function game() { 
     for (let i = 0; i < 5; i++) {
@@ -25,10 +23,12 @@ function playRound(computerSelection, playerSelection) {
         alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
 
     } 
-    else { 
-        alert('You can only type either rock, paper or scissors. Try again');
-        for (let i = 1; i != playerSelection; i++)
-    }
+    // else { 
+    //     alert('You can only type either rock, paper or scissors. Try again');
+    //     // for (let i = Rock || Paper || Scissors; i != playerSelection; i++) {
+    //     //     console.log(playerSelection);
+    //     // }
+    // }
    
     getComputerChoice();
     // Declare a function that let the computer choose a random number between 1, 2 and 3 (OK)
@@ -68,7 +68,7 @@ function playRound(computerSelection, playerSelection) {
         } else if (computerSelection === Scissors && playerSelection === Rock) {
             alert('You win ! Rock beats Scissors');
         } else if (computerSelection === playerSelection) {
-            alert('It\'s a tie. Next round');
+            alert('It\'s a tie.');
         } 
     }
 
