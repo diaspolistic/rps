@@ -10,25 +10,27 @@ function game() {
 }
 // Write a function that plays a single round of Rock paper Scissors
 function playRound(computerSelection, playerSelection) {
+    
     // // The user plays the first round
-    playerSelection = prompt('It\'s your turn. Type either rock, paper or scissors');
+    getPlayerChoice();
+    function getPlayerChoice() {
+        playerSelection = prompt('It\'s your turn. Type either rock, paper or scissors');
 
-    if (playerSelection.toLowerCase() === Rock) {
-        alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
+        if (playerSelection.toLowerCase() === Rock) {
+            alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
 
-    } else if (playerSelection.toLowerCase() === Paper) {
-        alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
+        } else if (playerSelection.toLowerCase() === Paper) {
+            alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
 
-    } else if (playerSelection.toLowerCase() === Scissors) {
-        alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
+        } else if (playerSelection.toLowerCase() === Scissors) {
+            alert('You\'ve played' + ' ' + playerSelection.toLowerCase());
 
-    } 
-    // else { 
-    //     alert('You can only type either rock, paper or scissors. Try again');
-    //     // for (let i = Rock || Paper || Scissors; i != playerSelection; i++) {
-    //     //     console.log(playerSelection);
-    //     // }
-    // }
+        } 
+        else { 
+            alert('You can only type either rock, paper or scissors. Try again');
+            getPlayerChoice();
+        }
+    }
    
     getComputerChoice();
     // Declare a function that let the computer choose a random number between 1, 2 and 3 (OK)
