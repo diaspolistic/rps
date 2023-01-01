@@ -16,20 +16,12 @@ function game() {
     for (let i = 0; i < 5; i++) {
         playRound();
     }
-    if (result() === win) {
-       for (let playerSelection = 1;
-        console.log(result());
-    
-    } else if (result() === loose) {
-        computerSelection === 1;
-        console.log(result());
-
-    }
-    if (win >= 3) {
+ 
+    if (playerScore >= 3) {
         alert('You\'ve won the Rock, Paper, Scissors game !!');
     
-    } else if (loose >= 3) {
-        alert('Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game')
+    } else if (playerScore < 3) {
+        alert('Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game');
 
 }
 // Write a function that plays a single round of Rock paper Scissors
@@ -82,20 +74,36 @@ function playRound(computerSelection, playerSelection) {
     result();
     function result() {
         if (computerSelection === rock && playerSelection === paper) {
+            playerSelection = win;
             alert(win + ' Paper beats Rock ');
         } else if (computerSelection === rock && playerSelection === scissors) {
+            playerSelection = loose;
             alert(loose + ' Rock beats Scissors');
         } else if (computerSelection === paper && playerSelection === rock) {
+            playerSelection = loose;
             alert(loose + ' Paper beats Rock');
         } else if (computerSelection === paper && playerSelection === scissors) {
+            playerSelection = win;
             alert(win + ' Scissors beats Paper');
         } else if (computerSelection === scissors && playerSelection === paper) {
+            playerSelection = loose;
             alert(loose + ' ' + 'Scissors beats Paper');
         } else if (computerSelection === scissors && playerSelection === rock) {
+            playerSelection = win;
             alert(win + ' Rock beats Scissors');
         } else if (computerSelection === playerSelection) {
             alert('It\'s a tie.');
         } 
+
+        if (playerSelection === win) {
+            playerScore = playerScore + 1;
+            console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+        
+        } else if (playerSelection === loose) {
+            computerScore = computerScore + 1;
+            console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+    
+        }
     }
 
 }
