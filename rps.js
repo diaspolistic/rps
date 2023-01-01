@@ -23,7 +23,9 @@ function game() {
     } else if (playerScore < 3) {
         alert('Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game');
 
-}
+    } else if (playerScore === computerScore) {
+        alert('Well, it looks like the computer and you have the same level... Maybe start another game to find out who is the true Rock, Paper, Scissors champion !')
+    }
 // Write a function that plays a single round of Rock paper Scissors
 function playRound(computerSelection, playerSelection) {
     
@@ -97,12 +99,14 @@ function playRound(computerSelection, playerSelection) {
 
         if (playerSelection === win) {
             playerScore = playerScore + 1;
-            console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+            console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.' + ' You\'re ahead !');
         
         } else if (playerSelection === loose) {
             computerScore = computerScore + 1;
-            console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+            console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.' + ' You\'re falling behind...!');
     
+        } else if (playerScore ===computerScore) { 
+            console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.' + ' It looks like a tie so far.')
         }
     }
 
