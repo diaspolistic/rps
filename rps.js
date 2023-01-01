@@ -12,6 +12,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 // Write a function that create a loop to play 5 rounds and the final winner
+game();
 function game() { 
     for (let i = 0; i < 5; i++) {
         playRound();
@@ -105,13 +106,13 @@ function playRound(computerSelection, playerSelection) {
             computerScore = computerScore + 1;
             console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.' + ' You\'re falling behind...!');
     
-        } else if (playerScore ===computerScore) { 
+        } else if (playerScore === computerScore) { 
             console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.' + ' It looks like a tie so far.')
         }
-    }
+     }
 
+    }
 }
-}
-// console.log(playRound());
-console.log(game());
+// // console.log(playRound());
+// console.log(game());
 
