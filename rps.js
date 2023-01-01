@@ -3,10 +3,16 @@ let Rock = 'rock';
 let Paper = 'paper';
 let Scissors = 'scissors';
 
+// Declare a variable for winner of looser 
+let Win = 'You win !';
+let Loose = 'You loose !';
+
+// Write a function that create a loop to play 5 rounds and the final winner
 function game() { 
     for (let i = 0; i < 5; i++) {
         playRound();
     }
+    // if (result() 
 }
 // Write a function that plays a single round of Rock paper Scissors
 function playRound(computerSelection, playerSelection) {
@@ -58,17 +64,17 @@ function playRound(computerSelection, playerSelection) {
     result();
     function result() {
         if (computerSelection === Rock && playerSelection === Paper) {
-            alert('You win ! Paper beats Rock ');
+            alert(Win + ' Paper beats Rock ');
         } else if (computerSelection === Rock && playerSelection === Scissors) {
-            alert('You loose ! Rock beats Scissors');
+            alert(Loose + ' Rock beats Scissors');
         } else if (computerSelection === Paper && playerSelection === Rock) {
-            alert('You loose ! Paper beats Rock');
+            alert(Loose + ' Paper beats Rock');
         } else if (computerSelection === Paper && playerSelection === Scissors) {
-            alert('You win ! Scissors beats Paper');
+            alert(Win + ' Scissors beats Paper');
         } else if (computerSelection === Scissors && playerSelection === Paper) {
-            alert('You loose ! Scissors beats Paper');
+            alert(Loose + ' ' + 'Scissors beats Paper');
         } else if (computerSelection === Scissors && playerSelection === Rock) {
-            alert('You win ! Rock beats Scissors');
+            alert(Win + ' Rock beats Scissors');
         } else if (computerSelection === playerSelection) {
             alert('It\'s a tie.');
         } 
