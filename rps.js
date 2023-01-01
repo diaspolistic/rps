@@ -4,7 +4,7 @@ let Paper = 'paper';
 let Scissors = 'scissors';
 
 // Write a function that plays a single round of Rock paper Scissors
-function rpsGame(computerSelection, playerSelection) {
+function playRound(computerSelection, playerSelection) {
     // // The user plays the first round
     playerSelection = prompt('It\'s your turn. Type either rock, paper or scissors');
 
@@ -22,7 +22,6 @@ function rpsGame(computerSelection, playerSelection) {
         prompt('You can only type either rock, paper or scissors. Try again');
     }
    
-
     getComputerChoice();
     // Declare a function that let the computer choose a random number between 1, 2 and 3 (OK)
     function getComputerChoice() {
@@ -32,7 +31,6 @@ function rpsGame(computerSelection, playerSelection) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
             } 
         
-
     // Assign a value (Rock, Paper or Scissors) to computerSelection parameter according to the randomNumber    
         if (randomNumber() === 1) {
             computerSelection = Rock;
@@ -67,8 +65,4 @@ function rpsGame(computerSelection, playerSelection) {
     }
 
 }
-
-
-
-
-    
+console.log(playRound());
