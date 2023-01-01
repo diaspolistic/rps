@@ -27,6 +27,8 @@ function game() {
     } else if (playerScore === computerScore) {
         alert('Well, it looks like the computer and you have the same level... Maybe start another game to find out who is the true Rock, Paper, Scissors champion !')
     }
+    console.log('Here is the final score : '+ 'You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+
 // Write a function that plays a single round of Rock paper Scissors
 function playRound(computerSelection, playerSelection) {
     
@@ -50,14 +52,14 @@ function playRound(computerSelection, playerSelection) {
             getPlayerChoice();
         }
     }
-   
+
     getComputerChoice();
-    // Declare a function that let the computer choose a random number between 1, 2 and 3 (OK)
     function getComputerChoice() {
+    // Declare a function that let the computer choose a random number between 1, 2 and 3
         function randomNumber(min, max) {
             min = Math.ceil(1);
             max = Math.floor(3);
-            return Math.floor(Math.random() * (max - min + 1)) + min;
+            return(Math.floor(Math.random() * (max - min + 1)) + min);
             } 
         
     // Assign a value (Rock, Paper or Scissors) to computerSelection parameter according to the randomNumber    
