@@ -2,7 +2,14 @@
 let Rock = 'rock';
 let Paper = 'paper';
 let Scissors = 'scissors';
+let oneRound = playRound();
 
+
+function game() { 
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    }
+}
 // Write a function that plays a single round of Rock paper Scissors
 function playRound(computerSelection, playerSelection) {
     // // The user plays the first round
@@ -19,7 +26,8 @@ function playRound(computerSelection, playerSelection) {
 
     } 
     else { 
-        prompt('You can only type either rock, paper or scissors. Try again');
+        alert('You can only type either rock, paper or scissors. Try again');
+        for (let i = 1; i != playerSelection; i++)
     }
    
     getComputerChoice();
@@ -65,4 +73,6 @@ function playRound(computerSelection, playerSelection) {
     }
 
 }
-console.log(playRound());
+// console.log(playRound());
+console.log(game());
+
