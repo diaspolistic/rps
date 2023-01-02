@@ -71,7 +71,7 @@ function playRound(computerSelection, playerSelection) {
             }
     }
 
-        // Declare a function that gives the result of each round 
+        // Declare a function that gives the result of each round and compare the computerChoice and the playerSelection and alert the winner/looser 
         function roundResult() {
 
             if (computerSelection === rock && playerSelection === paper) {
@@ -134,12 +134,12 @@ function game() {
         if ((playerScore > computerScore) || (playerScore >= 3)) {
             alert(gameWon);
             console.log(gameWon);
-            console.log('Here is the final score : '+ 'You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+            console.log('Here is the final score :' + currentScore);
         
         } else if ((playerScore < computerScore) || (computerScore >=3)) {
             alert(gameLost);
             console.log(gameLost);
-            console.log('Here is the final score : '+ 'You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+            console.log('Here is the final score :' + currentScore);
             
         } else if ((playerScore === computerScore) && i == 5) {
             newGame = prompt('Well, it looks like the computer and you have the same level... Write "Yes" to start another game to find out who is the true Rock, Paper, Scissors champion !');
@@ -153,32 +153,6 @@ function game() {
         
     }
 }
- 
-   
-
-// Write a function that plays a single round of Rock paper Scissors
-
-
-
-// Compare the computerChoice and the playerSelection and alert the winner/looser 
-    
-
-        
-    //     roundScore();
-    //     function roundScore() {
-    //     if (playerSelection === win) {
-    //         playerScore = playerScore + 1;
-    //         console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.' + ' You\'re ahead !');
-        
-    //     } else if (playerSelection === loose) {
-    //         computerScore = computerScore + 1;
-    //         console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.' + ' You\'re falling behind...!');
-    
-    //     } else if (playerScore === computerScore) { 
-    //         console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.' + ' It looks like a tie so far.')
-    //     }
-
-    // }
     
 
  
