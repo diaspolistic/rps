@@ -12,7 +12,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 // The user plays the first round
- function getPlayerChoice() {
+ function getPlayerChoice(playerSelection) {
     playerSelection = prompt('It\'s your turn. Type either rock, paper or scissors');
 
     if (playerSelection.toLowerCase() === rock) {
@@ -32,8 +32,7 @@ let computerScore = 0;
 }
 
 // The computer plays the second round
-function getComputerChoice() {
-    randomNumber();
+function getComputerChoice(computerSelection) {
 
 // Declare a function that let the computer choose a random number between 1, 2 and 3
     function randomNumber(min, max) {
