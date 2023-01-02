@@ -1,4 +1,4 @@
-// I've added comment to each function to understand what each one does :)
+// I've added comments to each function to understand what each one does :)
 
 // Assign a variable for each choice 
 let rock = 'rock';
@@ -16,6 +16,7 @@ let computerScore = 0;
 // Assign a variable to give details when game won or lost
 let gameWon = 'You\'ve won the Rock, Paper, Scissors game !!';
 let gameLost = 'Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game';
+let gameDraw = 'Well, it looks like the computer and you have the same level...';
 
 // Show a first alert that indicate what will the game be
 alert('You\'re going to play a \"Rock, Paper, Scissors\" game against the computer. There will be up to 5 rounds.');
@@ -106,17 +107,13 @@ function playRound(computerSelection, playerSelection) {
                
             } else if (computerSelection === playerSelection) {
                 alert('It\'s a tie.');
-
             } 
 
             let currentScore = 'You have ' + playerScore + ' point' + (playerScore > 1 ? 's' : '') + ' and the computer has ' + computerScore + ' point' + (computerScore > 1 ? 's.' : '.');
             console.log(currentScore);
           
     } 
-}
-
- // Assign a variable for giving the current score
- 
+} 
 
 // Declare a function that create a loop to play 5 rounds and the final winner
 game();
@@ -140,13 +137,14 @@ function game() {
             console.log(gameWon);
             console.log('Here is the final score :' + finalScore);
         
-        } else if ((playerScore < computerScore) || (computerScore >=3)) {
+        } else if ((playerScore < computerScore) || (computerScore >= 3)) {
             alert(gameLost);
             console.log(gameLost);
             console.log('Here is the final score :' + finalScore);
             
         } else if ((playerScore === computerScore) && i == 5) {
-            console.log('Well, it looks like the computer and you have the same level...');
+            alert(gameDraw);
+            console.log(gameDraw);
             console.log('Here is the final score :' + finalScore);
 
         } newGame = prompt('Do you want to start a new game of Rock, Paper, Scissors ? Write "Yes" to start another game.');
