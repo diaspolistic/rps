@@ -2,7 +2,7 @@
 <!-- OVERVIEW -->
 This is a Rock, Paper, Scissors project. 
 Only the Javascript part is programmed.
-It took me time but it was worth it, I've learned a lot while doing this project and figuring it out.
+It took me time but it was worth it, I've learned a lot while doing this project, especially on functions scope and hoisting.
 
 <!-- RULES -->
 You can play up to 5 rounds of the game. 
