@@ -15,7 +15,7 @@ let computerScore = 0;
 
 // Assign a variable to give details when game won or lost
 let gameWon = 'You\'ve won the Rock, Paper, Scissors game !!';
-let gameLost = 'Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game';
+let gameLost = 'Oh no, this is so sad, you\'ve lost the Rock, Paper, Scissors game';
 let gameDraw = 'Well, it looks like the computer and you have the same level...';
 
 // Show a first alert that indicate what will the game be
