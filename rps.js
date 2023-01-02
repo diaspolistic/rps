@@ -54,13 +54,18 @@ function getComputerChoice(computerSelection) {
     }
 }
 
-
 // Write a function that create a loop to play 5 rounds and the final winner
 game();
 function game() { 
     for (let i = 0; i < 5; i++) {
         playRound();
     }
+    function playRound(computerSelection, playerSelection) {
+        getPlayerChoice(playerSelection);
+        getComputerChoice(computerSelection);
+        result(computerSelection, playerSelection);
+    }
+}
  
     if (playerScore >= 3) {
         alert('You\'ve won the Rock, Paper, Scissors game !!');
@@ -74,17 +79,11 @@ function game() {
     console.log('Here is the final score : '+ 'You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
 
 // Write a function that plays a single round of Rock paper Scissors
-function playRound(computerSelection, playerSelection) {
-    getPlayerChoice();
-    getComputerChoice();
-    result();
 
-   
 
-   
 
 // Compare the computerChoice and the playerSelection and alert the winner/looser 
-    function result() {
+    function result(computerSelection, playerSelection) {
         if (computerSelection === rock && playerSelection === paper) {
             playerSelection = win;
             alert(win + ' Paper beats Rock ');
