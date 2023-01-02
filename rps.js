@@ -13,6 +13,10 @@ let loose = 'You loose !';
 let playerScore = 0;
 let computerScore = 0;
 
+// Assign a variable to give details when game won or lost
+let gameWon = 'You\'ve won the Rock, Paper, Scissors game !!';
+let gameLost = 'Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game';
+
 // Show a first alert that indicate what will the game be
 alert('You\'re going to play a \"Rock, Paper, Scissors\" game against the computer. There will be up to 5 rounds.');
 
@@ -66,7 +70,7 @@ function playRound(computerSelection, playerSelection) {
             }
     }
 
-        // Give the result of each round 
+        // Declare a function that gives the result of each round 
         function roundResult() {
             if (computerSelection === rock && playerSelection === paper) {
                 playerSelection = win;
@@ -106,7 +110,7 @@ function playRound(computerSelection, playerSelection) {
     }
 }
 
-// Write a function that create a loop to play 5 rounds and the final winner
+// Declare a function that create a loop to play 5 rounds and the final winner
 game();
 function game() { 
     for (var i = 0; i < 5; i++) {
@@ -123,16 +127,14 @@ function game() {
     finalResult()
     function finalResult() { 
         if ((playerScore > computerScore) || (playerScore >= 3)) {
-            alert('You\'ve won the Rock, Paper, Scissors game !!');
+            alert(gameWon);
+            console.log(gameWon);
             console.log('Here is the final score : '+ 'You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
-            // console.log('You\'ve won the Rock, Paper, Scissors game !!');
-            // return;
         
         } else if ((playerScore < computerScore) || (computerScore >=3)) {
-            alert('Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game');
+            alert(gameLost);
+            console.log(gameLost);
             console.log('Here is the final score : '+ 'You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
-            // console.log('Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game');
-            // return;
             
         } else if ((playerScore === computerScore) && i == 5) {
             newGame = prompt('Well, it looks like the computer and you have the same level... Write "Yes" to start another game to find out who is the true Rock, Paper, Scissors champion !');
