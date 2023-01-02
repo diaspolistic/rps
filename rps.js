@@ -11,6 +11,7 @@ let loose = 'You loose !';
 let playerScore = 0;
 let computerScore = 0;
 
+alert('You\'re going to play a \"Rock, Paper, Scissors\" game against the computer. There will be 5 rounds in total.');
 
 function playRound(computerSelection, playerSelection) {
     getPlayerChoice();
@@ -36,7 +37,7 @@ function playRound(computerSelection, playerSelection) {
         console.log(getPlayerChoice());
     }
 }
-// The computer plays seond
+// The computer plays second
 function getComputerChoice() {
 
     // Declare a function that let the computer choose a random number between 1, 2 and 3
@@ -98,14 +99,12 @@ function getComputerChoice() {
         } 
 
 }
-
-
 }
 
 // Write a function that create a loop to play 5 rounds and the final winner
 game();
 function game() { 
-    for (let i = 0; i < 5; i++) {
+    for (var i = 0; i < 5; i++) {
         playRound();
     }
 
