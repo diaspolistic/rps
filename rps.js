@@ -109,11 +109,14 @@ function playRound(computerSelection, playerSelection) {
 
             } 
 
-            // Assign a variable for giving the current score
             let currentScore = 'You have ' + playerScore + ' point' + (playerScore > 1 ? 's' : '') + ' and the computer has ' + computerScore + ' point' + (computerScore > 1 ? 's.' : '.');
             console.log(currentScore);
+          
     } 
 }
+
+ // Assign a variable for giving the current score
+ 
 
 // Declare a function that create a loop to play 5 rounds and the final winner
 game();
@@ -131,25 +134,28 @@ function game() {
     // Give the game final result
     finalResult()
     function finalResult() { 
+        let finalScore = 'You have ' + playerScore + ' point' + (playerScore > 1 ? 's' : '') + ' and the computer has ' + computerScore + ' point' + (computerScore > 1 ? 's.' : '.');
         if ((playerScore > computerScore) || (playerScore >= 3)) {
             alert(gameWon);
             console.log(gameWon);
-            console.log('Here is the final score :' + currentScore);
+            console.log('Here is the final score :' + finalScore);
         
         } else if ((playerScore < computerScore) || (computerScore >=3)) {
             alert(gameLost);
             console.log(gameLost);
-            console.log('Here is the final score :' + currentScore);
+            console.log('Here is the final score :' + finalScore);
             
         } else if ((playerScore === computerScore) && i == 5) {
-            newGame = prompt('Well, it looks like the computer and you have the same level... Write "Yes" to start another game to find out who is the true Rock, Paper, Scissors champion !');
-            if (newGame.toLowerCase() == 'yes') {
-                game();
+            console.log('Well, it looks like the computer and you have the same level...');
+            console.log('Here is the final score :' + finalScore);
 
-            } else {
-                return;
-            }
-        } 
+        } newGame = prompt('Do you want to start a new game of Rock, Paper, Scissors ? Write "Yes" to start another game.');
+        if (newGame.toLowerCase() == 'yes') {
+            game();
+
+        } else {
+            return;
+        }
         
     }
 }
