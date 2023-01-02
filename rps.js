@@ -112,11 +112,11 @@ function game() {
     // Give the game final result
     finalResult();
     function finalResult() {
-        if (playerScore >= 3) {
+        if ((playerScore > computerScore) || (playerScore >= 3)) {
             console.log('You\'ve won the Rock, Paper, Scissors game !!');
             return;
         
-        } else if (computerScore >= 3) {
+        } else if ((playerScore < computerScore) || (computerScore >=3)) {
             console.log('Oh no, this is so sad, you\'ve lost the Rock, paper, Scissors game');
             return;
     
