@@ -26,6 +26,7 @@ function playRound(computerSelection, playerSelection) {
     getComputerChoice();
     roundResult();
 
+
     // Declare a function that let the user plays first and give an input
     function getPlayerChoice() {
         playerSelection = prompt('It\'s your turn. Type either rock, paper or scissors');
@@ -72,42 +73,46 @@ function playRound(computerSelection, playerSelection) {
 
         // Declare a function that gives the result of each round 
         function roundResult() {
+
             if (computerSelection === rock && playerSelection === paper) {
                 playerSelection = win;
                 playerScore = playerScore + 1;
                 alert(win + ' Paper beats Rock ');
-                console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+            
             } else if (computerSelection === rock && playerSelection === scissors) {
                 playerSelection = loose;
                 computerScore = computerScore + 1;
                 alert(loose + ' Rock beats Scissors');
-                console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+            
             } else if (computerSelection === paper && playerSelection === rock) {
                 playerSelection = loose;
                 computerScore = computerScore + 1;
                 alert(loose + ' Paper beats Rock');
-                console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+            
             } else if (computerSelection === paper && playerSelection === scissors) {
                 playerSelection = win;
                 playerScore = playerScore + 1;
                 alert(win + ' Scissors beats Paper');
-                console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+              
             } else if (computerSelection === scissors && playerSelection === paper) {
                 playerSelection = loose;
                 computerScore = computerScore + 1;
                 alert(loose + ' ' + 'Scissors beats Paper');
-                console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+               
             } else if (computerSelection === scissors && playerSelection === rock) {
                 playerSelection = win;
                 playerScore = playerScore + 1;
                 alert(win + ' Rock beats Scissors');
-                console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+               
             } else if (computerSelection === playerSelection) {
                 alert('It\'s a tie.');
-                console.log('You have ' + playerScore + ' point ' + 'and the computer has ' + computerScore + ' point.');
+
             } 
 
-    }
+            // Assign a variable for giving the current score
+            let currentScore = 'You have ' + playerScore + ' point' + (playerScore > 1 ? 's' : '') + ' and the computer has ' + computerScore + ' point' + (computerScore > 1 ? 's.' : '.');
+            console.log(currentScore);
+    } 
 }
 
 // Declare a function that create a loop to play 5 rounds and the final winner
@@ -144,7 +149,7 @@ function game() {
             } else {
                 return;
             }
-        }
+        } 
         
     }
 }
