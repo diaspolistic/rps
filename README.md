@@ -1,4 +1,4 @@
-# rps
+# ROCK PAPER SCISSORS
 <!-- OVERVIEW -->
 This is a Rock, Paper, Scissors project. 
 Only the Javascript part is programmed.
