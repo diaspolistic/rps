@@ -1,5 +1,3 @@
-// I've added comments to each function to understand what each one does :)
-
 // Assign a variable for each choice 
 let rock = 'rock';
 let paper = 'paper';
