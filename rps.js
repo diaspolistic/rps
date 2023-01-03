@@ -19,13 +19,13 @@ let gameLost = 'Oh no, this is so sad, you\'ve lost the Rock, Paper, Scissors ga
 let gameDraw = 'Well, it looks like the computer and you have the same level...';
 
 // Show a first alert that indicate what will the game be
-alert('You\'re going to play a \"Rock, Paper, Scissors\" game against the computer. There will be up to 5 rounds.');
+alert('You\'re going to play a \"Rock, Paper, Scissors\" game against the computer. There will be   up to 5 rounds.');
 
 // Declare a function that call functions to play one round of the game
 function playRound(computerSelection, playerSelection) {
     getPlayerChoice();
     getComputerChoice();
-    roundResult();
+    giveRoundResult();
 
 
     // Declare a function that let the user plays first and give an input
@@ -73,7 +73,7 @@ function playRound(computerSelection, playerSelection) {
     }
 
         // Declare a function that gives the result of each round and compare the computerChoice and the playerSelection and alert the winner/looser 
-        function roundResult() {
+        function giveRoundResult() {
 
             if (computerSelection === rock && playerSelection === paper) {
                 playerSelection = win;
