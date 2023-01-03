@@ -128,10 +128,12 @@ function game() {
         }
     }
 
-    // Give the game final result
+    // Declare a function with conditionals that gives the game final result and asks the user if he/she wants to play another game of Rock, Paper, Scissors. 
     finalResult()
     function finalResult() { 
+        // Assign a variable finalScore to a long string that gives the final score
         let finalScore = 'You have ' + playerScore + ' point' + (playerScore > 1 ? 's' : '') + ' and the computer has ' + computerScore + ' point' + (computerScore > 1 ? 's.' : '.');
+
         if ((playerScore > computerScore) || (playerScore >= 3)) {
             alert(gameWon);
             console.log(gameWon);
