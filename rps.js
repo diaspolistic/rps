@@ -116,12 +116,12 @@ function playRound(computerSelection, playerSelection) {
 } 
 
 // Declare a function that create a loop to play 5 rounds and the final winner
-game();
-function game() { 
+playGame();
+function playGame() { 
     for (var i = 0; i < 5; i++) {
         playRound();
         if ((i >= 3) && (playerScore || computerScore) >= 3) {
-            finalResult();
+            getFinalResult();
             return;
         } else if ((i == 4) && (playerScore || computerScore) == 1 && (playerScore || computerScore) == 2) {
             playRound;
@@ -129,8 +129,8 @@ function game() {
     }
 
     // Declare a function with conditionals that gives the game final result and asks the user if he/she wants to play another game of Rock, Paper, Scissors. 
-    finalResult()
-    function finalResult() { 
+    getFinalResult()
+    function getFinalResult() { 
         // Assign a variable finalScore to a long string that gives the final score
         let finalScore = 'You have ' + playerScore + ' point' + (playerScore > 1 ? 's' : '') + ' and the computer has ' + computerScore + ' point' + (computerScore > 1 ? 's.' : '.');
 
